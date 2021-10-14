@@ -9,7 +9,7 @@
 body{
 	width: 100%;
 	height: 100vh;
-	background-image: url('./images/bg.jpg');
+	background-image: url('./bg.jpg');
 	background-size: cover;
 	background-position: center;
 	padding: 2rem;
@@ -100,7 +100,7 @@ span{
 	}
 
 	.image{
-		background-image: url('./images/farook.jpg');
+		background-image: url('./farook.jpg');
 		height: 100px;
 		width: 100px;
 		background-size: cover;
@@ -111,7 +111,7 @@ span{
     }
 
     .a{
-    	background-image: url('./images/farook.jpg');
+    	background-image: url('./farook.jpg');
 		height: 100px;
 		width: 100px;
 		background-size: cover;
