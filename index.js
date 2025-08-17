@@ -81,7 +81,6 @@ const jokes = [
   "Why do birthdays always smell? 🎂 ... Because people keep passing cake! 😂",
   "What did the cake say to the fork? 🍴 ... You want a piece of me? 😆",
   "Why was the birthday candle upset? 🕯️ ... Because it felt burnt out! 🔥",
-  "What’s the best way to remember your wife’s birthday? 💍 ... Forget it once. 😜",
   "Birthdays are like cheese 🧀 ... they stink more with age! 🤣"
 ];
 
