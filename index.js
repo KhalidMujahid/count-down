@@ -29,13 +29,11 @@ let getValues = setInterval(() => {
     hours.innerHTML = 0;
     mins.innerHTML = 0;
     sec.innerHTML = 0;
-
-    // Confetti celebration
+    
     confetti();
   }
 }, 1000);
 
-// Confetti Animation
 function confetti() {
   const duration = 5 * 1000;
   const end = Date.now() + duration;
@@ -51,7 +49,6 @@ function confetti() {
   })();
 }
 
-// Lightweight confetti (without external libs)
 function confettiEffect({ particleCount, angle, spread, origin, colors }) {
   for (let i = 0; i < particleCount; i++) {
     const el = document.createElement("div");
