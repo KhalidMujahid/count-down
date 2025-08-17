@@ -1,17 +1,44 @@
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0) rotateY(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotateY(15deg);
-  }
+.stars {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 60s linear infinite;
+  opacity: 0.3;
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 6s ease-in-out infinite;
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-500px); }
 }
 
 .countdown-card {
-  @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl
-         flex flex-col items-center justify-center p-6 transition-transform transform hover:scale-110 hover:rotate-3;
+  @apply relative flex flex-col items-center justify-center p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl;
+  transition: all 0.3s ease;
+}
+.countdown-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 150, 0.6), 0 0 50px rgba(0, 200, 255, 0.5);
+}
+
+.time {
+  @apply text-5xl md:text-6xl font-extrabold text-white;
+  letter-spacing: 2px;
+}
+
+.label {
+  @apply mt-2 text-lg uppercase tracking-widest text-gray-300;
+}
+
+.glow {
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowAnimation 5s linear infinite;
+}
+
+@keyframes glowAnimation {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
 }
