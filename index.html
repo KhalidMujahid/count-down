@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Birthday Countdown</title>
-		<link rel="stylesheet" href="./index.css">
-	</head>
-	<body>
-		<div class="name">
-			<h1><i>Birthday Loading</i>....</h1>
-		</div>
-		<div class="a">
-			<div class="image">
-				
-			</div>
-		</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Countdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="bg-gradient-to-r from-purple-900 via-black to-blue-900 text-white flex flex-col items-center justify-center min-h-screen font-sans">
 
-		<div class="container">
-			<div class="days">
-				<h1>11days</h1>
-			</div>
-			<div class="hours">
-				<h1>0 hours</h1>
-			</div>
-			<div class="mins">
-				<h1>12 mins</h1>
-			</div>
-			<div class="sec">
-				<h1>23 sec</h1>
-			</div>
-		</div>
-		<script src="./index.js"></script>
-	</body>
+  <!-- Title -->
+  <div class="text-center mb-10">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 animate-pulse drop-shadow-lg">
+      Birthday Loading...
+    </h1>
+  </div>
+
+  <!-- Floating Profile Image -->
+  <div class="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-2xl border-4 border-pink-500 animate-bounce-slow mb-10">
+    <img src="./farook.jpg" alt="Birthday Person" class="object-cover w-full h-full">
+  </div>
+
+  <!-- Countdown Container -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="countdown-card">
+      <h1 class="days text-3xl md:text-4xl font-bold"></h1>
+      <p class="text-sm md:text-lg text-gray-300">Days</p>
+    </div>
+    <div class="countdown-card">
+      <h1 class="hours text-3xl md:text-4xl font-bold"></h1>
+      <p class="text-sm md:text-lg text-gray-300">Hours</p>
+    </div>
+    <div class="countdown-card">
+      <h1 class="mins text-3xl md:text-4xl font-bold"></h1>
+      <p class="text-sm md:text-lg text-gray-300">Minutes</p>
+    </div>
+    <div class="countdown-card">
+      <h1 class="sec text-3xl md:text-4xl font-bold"></h1>
+      <p class="text-sm md:text-lg text-gray-300">Seconds</p>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
 </html>
