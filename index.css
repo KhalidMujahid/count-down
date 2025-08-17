@@ -25,16 +25,16 @@
 }
 
 .icon {
-  @apply text-3xl md:text-4xl mb-3 text-pink-400;
+  @apply text-4xl mb-3 text-pink-400 drop-shadow-md;
 }
 
 .time {
-  @apply text-4xl md:text-6xl font-extrabold text-white;
+  @apply text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg;
   letter-spacing: 1px;
 }
 
 .label {
-  @apply mt-2 text-sm md:text-lg uppercase tracking-widest text-gray-300;
+  @apply mt-2 text-base md:text-lg uppercase font-semibold text-white drop-shadow;
 }
 
 /* Bounce animation for profile */
@@ -58,4 +58,17 @@
 @keyframes glowAnimation {
   0% { background-position: 0%; }
   100% { background-position: 300%; }
+}
+
+/* Extra readability helpers */
+.bold-text {
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.section-heading {
+  font-size: 1.875rem; /* ~30px */
+  font-weight: 800;
+  color: #facc15; /* yellow-300 */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
