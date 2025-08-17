@@ -7,37 +7,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./index.css">
 </head>
-<body class="bg-gradient-to-r from-purple-900 via-black to-blue-900 text-white flex flex-col items-center justify-center min-h-screen font-sans">
+<body class="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-900 via-black to-blue-900 overflow-hidden">
 
-  <!-- Title -->
-  <div class="text-center mb-10">
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 animate-pulse drop-shadow-lg">
+  <!-- Background floating particles -->
+  <div class="absolute inset-0 overflow-hidden z-0">
+    <div class="stars"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 text-center px-6">
+    
+    <!-- Title -->
+    <h1 id="title" class="text-4xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-yellow-300 drop-shadow-xl animate-pulse">
       Birthday Loading...
     </h1>
-  </div>
 
-  <!-- Floating Profile Image -->
-  <div class="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-2xl border-4 border-pink-500 animate-bounce-slow mb-10">
-    <img src="./farook.jpg" alt="Birthday Person" class="object-cover w-full h-full">
-  </div>
-
-  <!-- Countdown Container -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div class="countdown-card">
-      <h1 class="days text-3xl md:text-4xl font-bold"></h1>
-      <p class="text-sm md:text-lg text-gray-300">Days</p>
-    </div>
-    <div class="countdown-card">
-      <h1 class="hours text-3xl md:text-4xl font-bold"></h1>
-      <p class="text-sm md:text-lg text-gray-300">Hours</p>
-    </div>
-    <div class="countdown-card">
-      <h1 class="mins text-3xl md:text-4xl font-bold"></h1>
-      <p class="text-sm md:text-lg text-gray-300">Minutes</p>
-    </div>
-    <div class="countdown-card">
-      <h1 class="sec text-3xl md:text-4xl font-bold"></h1>
-      <p class="text-sm md:text-lg text-gray-300">Seconds</p>
+    <!-- Countdown -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div class="countdown-card">
+        <span id="days" class="time"></span>
+        <p class="label">Days</p>
+      </div>
+      <div class="countdown-card">
+        <span id="hours" class="time"></span>
+        <p class="label">Hours</p>
+      </div>
+      <div class="countdown-card">
+        <span id="mins" class="time"></span>
+        <p class="label">Minutes</p>
+      </div>
+      <div class="countdown-card">
+        <span id="sec" class="time"></span>
+        <p class="label">Seconds</p>
+      </div>
     </div>
   </div>
 
